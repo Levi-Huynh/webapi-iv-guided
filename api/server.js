@@ -11,7 +11,7 @@ server.use(express.json());
 server.get('/', async (req, res) => {
   try {
     const shoutouts = await db('shoutouts');
-    res.status(200).json({messageOfTheDay: process.env.MOTD,
+    res.status(200).json({
       shoutouts});
   } catch (error) {
     console.error('\nERROR', error);
