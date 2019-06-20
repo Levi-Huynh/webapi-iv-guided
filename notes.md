@@ -6,7 +6,7 @@
 -deploy an API to heroku
 -make port dynamic
 -use enviornment variables
--setup continuous deployment (just push code and deployed automatically )
+-setup continuous deployment (just push code to git and deployed automatically )
 
 
 Add a "start" script to run the server using `node`
@@ -38,7 +38,13 @@ Have application read dynamic changes between enviornment? One node module ( the
 -define different KEY VALUE PAIRS 
 -must stop then start server (yarn server)  when make changes to key value pairs in .env file 
 
+--^ WONT SHOW YOUR .ENV KEY VALUE PAIRS/CHANGES FROM PROCESS.ENV IN THE DEPLOYED HEROKU VERSION  (.ENV FILE IS ONLY FOR DEV)
+-- In Heroku, Under Settings Can use Config Vars to show the KEYS from your .env files & CUSTOMIZE YOUR DEPLOY VALUES
+--Postgress allows you to persist that Data,  SQLite does not allow persist
 
 Install dev dependencies:
 
 -using yarn: `yarn add nodemon --dev`
+
+//Diandra
+
